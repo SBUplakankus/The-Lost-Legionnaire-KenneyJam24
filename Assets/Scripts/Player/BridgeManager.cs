@@ -9,6 +9,7 @@ namespace Player
         public int progressIndex;
         public GameObject[] noBridge;
         public GameObject[] bridges;
+        public ParticleSystem[] buildEffects;
 
         private void Awake()
         {
@@ -35,6 +36,7 @@ namespace Player
         /// </summary>
         public void BuildBridge()
         {
+            buildEffects[progressIndex].Play();
             noBridge[progressIndex].SetActive(false);
             bridges[progressIndex].SetActive(true);    
             progressIndex++;

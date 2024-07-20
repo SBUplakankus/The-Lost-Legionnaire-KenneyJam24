@@ -67,8 +67,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Requires 10 Materials
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0efa65f03e53adc4ca813c86a3a20338, type: 2}
+  m_sharedMaterial: {fileID: 2598074676681775300, guid: 0efa65f03e53adc4ca813c86a3a20338,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -146,6 +147,7 @@ GameObject:
   - component: {fileID: 702757178188146707}
   - component: {fileID: 8941816060059234252}
   - component: {fileID: 4500564653327450712}
+  - component: {fileID: 3819205972260772924}
   m_Layer: 0
   m_Name: Canvas Pop Up
   m_TagString: Untagged
@@ -236,6 +238,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3819205972260772924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2741651056906541799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81e693a3a388a240b79cabf60b0205c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 5451519741471014437}
 --- !u!1 &4377491391159660060
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,8 +318,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Build Bridge [E]
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0efa65f03e53adc4ca813c86a3a20338, type: 2}
+  m_sharedMaterial: {fileID: 2598074676681775300, guid: 0efa65f03e53adc4ca813c86a3a20338,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -501,7 +517,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 3}
+  m_Size: {x: 3, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2374821061355381870
 MonoBehaviour:
@@ -529,6 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c55b2279be515468228347ed83a63a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialCost: 10
+  materialCost: 5
   materialCostText: {fileID: 3512532778707850454}
   popUpCanvas: {fileID: 2741651056906541799}

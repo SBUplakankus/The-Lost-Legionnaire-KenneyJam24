@@ -7,6 +7,7 @@ namespace Player
     {
         [SerializeField] private Transform[] respawns;
         [SerializeField] private BridgeManager bridgeManager;
+        [SerializeField] private ResourceTracker resourceTracker;
 
         private void OnCollisionEnter(Collision other)
         {
@@ -20,6 +21,7 @@ namespace Player
         public void Respawn()
         {
             transform.position = respawns[bridgeManager.progressIndex].position;
+            resourceTracker.respawns++;
         }
     }
 }

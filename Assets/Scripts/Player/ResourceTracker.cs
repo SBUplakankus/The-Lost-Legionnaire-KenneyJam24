@@ -7,6 +7,7 @@ namespace Player
         public static ResourceTracker instance;
         public int currentMaterials;
         public int collectiblesFound;
+        public int respawns;
         public float timeTaken;
 
         private void Awake()
@@ -20,6 +21,7 @@ namespace Player
             timeTaken += Time.deltaTime;
             currentMaterials = 0;
             collectiblesFound = 0;
+            respawns = 0;
         }
     }
 }

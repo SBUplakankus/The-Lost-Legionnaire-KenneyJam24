@@ -103,6 +103,17 @@ namespace UI
         }
         
         /// <summary>
+        /// Get the End Game Screen Stats
+        /// </summary>
+        private void SetEndGameStats()
+        {
+            collectiblesGot.text = ((_resourceTracker.collectiblesFound / 5) * 100).ToString("F2") + " %";
+            respawnsNeeded.text = _resourceTracker.respawns.ToString();
+            var timeSpan = TimeSpan.FromSeconds(_resourceTracker.timeTaken);
+            timeTaken.text = _resourceTracker.timeTaken.ToString(@"mm\:ss");
+        }
+        
+        /// <summary>
         /// Show the Material Counters
         /// </summary>
         private void ShowMaterials()
