@@ -36,14 +36,12 @@ namespace UI
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Bridge Entered");
             if(other.gameObject.CompareTag("Player"))
                 popUpCanvas.SetActive(true);
         }
 
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("Bridge Exited");
             if(other.gameObject.CompareTag("Player"))
                 popUpCanvas.SetActive(false);
         }

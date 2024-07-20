@@ -17,7 +17,7 @@ namespace Player
         /// <summary>
         /// Respawn the player when they hit the water
         /// </summary>
-        private void Respawn()
+        public void Respawn()
         {
             transform.position = respawns[bridgeManager.progressIndex].position;
         }

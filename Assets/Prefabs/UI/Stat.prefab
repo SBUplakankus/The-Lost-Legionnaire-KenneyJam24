@@ -23,7 +23,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4231166018035736926}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -69,10 +69,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5443982848774253624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25.887007}
-  m_SizeDelta: {x: 773.17, y: 52.373795}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 25.077}
+  m_SizeDelta: {x: 773.17, y: 50.154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7736138638453547315
 CanvasRenderer:
@@ -104,8 +104,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Collectibles Found
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0efa65f03e53adc4ca813c86a3a20338, type: 2}
+  m_sharedMaterial: {fileID: 2598074676681775300, guid: 0efa65f03e53adc4ca813c86a3a20338,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,10 +204,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5443982848774253624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000026228, y: 35.114998}
-  m_SizeDelta: {x: 773.17, y: 70.222}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000026228, y: -25.077}
+  m_SizeDelta: {x: 773.17, y: 50.154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5429337933895457485
 CanvasRenderer:
@@ -238,8 +239,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100%
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0efa65f03e53adc4ca813c86a3a20338, type: 2}
+  m_sharedMaterial: {fileID: 2598074676681775300, guid: 0efa65f03e53adc4ca813c86a3a20338,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -271,7 +273,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 32
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
