@@ -98,6 +98,7 @@ namespace UI
         private void ShowPauseMenu()
         {
             HideTutorial();
+            HideControls();
             counterBox.SetActive(false);
             menuBlur.SetActive(true);
             pauseMenu.transform.position = pausePositions[1].position;
