@@ -807,9 +807,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4761abdc8872d0468bb8ffbee273af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bridgeManager: {fileID: 0}
   currentMaterials: 0
   collectiblesFound: 0
   respawns: 0
+  buildCosts: 
   timeTaken: 0
 --- !u!114 &84892132
 MonoBehaviour:
@@ -1271,6 +1273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3776fbbb6e974c40a710181321fbd58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a3776fbbb6e974c40a710181321fbd58,
         type: 3}
@@ -47249,7 +47256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2002346630
 Transform:
   m_ObjectHideFlags: 0
