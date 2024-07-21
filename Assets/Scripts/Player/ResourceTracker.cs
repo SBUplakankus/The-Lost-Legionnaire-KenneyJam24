@@ -1,4 +1,5 @@
 using System;
+using UI;
 using UnityEngine;
 
 namespace Player
@@ -6,9 +7,11 @@ namespace Player
     public class ResourceTracker : MonoBehaviour
     {
         public static ResourceTracker instance;
+        [SerializeField] private BridgeManager bridgeManager;
         public int currentMaterials;
         public int collectiblesFound;
         public int respawns;
+        public int[] buildCosts;
         public float timeTaken;
 
         private void Awake()
@@ -27,6 +30,14 @@ namespace Player
         private void Update()
         {
             timeTaken += Time.deltaTime;
+            
+        }
+        
+        public void GetNextBuild()
+        {
+            if(currentMaterials < buildCosts[bridgeManager.progressIndex]) return;
+            currentMaterials -= buildCosts[bridgeManager.progressIndex];
+            bridgeManager.BuildBridge();
         }
     }
 }

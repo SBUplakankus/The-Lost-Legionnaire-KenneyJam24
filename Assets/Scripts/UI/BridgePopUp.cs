@@ -7,9 +7,9 @@ namespace UI
 {
     public class BridgePopUp : MonoBehaviour
     {
-        public int materialCost;
+        [SerializeField] private int materialCost;
+        [SerializeField] private int buildIndex;
         public TMP_Text materialCostText;
-        
         public GameObject popUpCanvas;
         private ResourceTracker _resourceTracker;
         private BridgeManager _bridgeManager;
@@ -25,14 +25,13 @@ namespace UI
 
         private void Update()
         {
-            _readyToCraft = _resourceTracker.currentMaterials >= materialCost;
-
-            if (!Input.GetKeyDown(KeyCode.E) || !_readyToCraft) return;
+            if (!Input.GetKeyDown(KeyCode.E)) return;
             
+            _resourceTracker.GetNextBuild();
+                
             Debug.Log(_resourceTracker.currentMaterials);
             Debug.Log(materialCost);
-            _resourceTracker.currentMaterials -= materialCost;
-            _bridgeManager.BuildBridge();
+            Debug.Log(_resourceTracker.buildCosts[buildIndex]);
         }
 
         private void OnTriggerEnter(Collider other)

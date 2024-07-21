@@ -33,7 +33,11 @@ namespace Player
 
             progressIndex = 0;
         }
-    
+
+        public void GetNextBuild()
+        {
+            
+        }
         /// <summary>
         /// Build a Bridge at the location
         /// </summary>
