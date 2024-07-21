@@ -27,5 +27,15 @@ namespace Player
             _animator.SetFloat("Speed", _velocityMagnitude / MaxSpeed);
             
         }
+
+        public void PickUp()
+        {
+            _animator.SetTrigger("Pickup");
+        }
+
+        public void Build()
+        {
+            _animator.SetTrigger("Build");
+        }
     }
 }

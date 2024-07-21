@@ -1,4 +1,5 @@
 using System;
+using Systems;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -91,6 +92,7 @@ namespace Player
         /// </summary>
         public void Respawn()
         {
+            AudioManager.instance.PlaySplash();
             transform.position = respawns[bridgeManager.progressIndex].position;
             resourceTracker.respawns++;
         }

@@ -8,7 +8,6 @@ namespace UI
     public class BridgePopUp : MonoBehaviour
     {
         public int materialCost;
-        public int buildIndex;
         public TMP_Text materialCostText;
         
         public GameObject popUpCanvas;
@@ -26,28 +25,25 @@ namespace UI
 
         private void Update()
         {
-            popUpCanvas.SetActive(_bridgeManager.progressIndex == buildIndex);
-
             _readyToCraft = _resourceTracker.currentMaterials >= materialCost;
 
             if (!Input.GetKeyDown(KeyCode.E) || !_readyToCraft) return;
             
+            Debug.Log(_resourceTracker.currentMaterials);
+            Debug.Log(materialCost);
             _resourceTracker.currentMaterials -= materialCost;
             _bridgeManager.BuildBridge();
-            Destroy(gameObject);
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if(!other.gameObject.CompareTag("Player")) return;
-            if(_bridgeManager.progressIndex == buildIndex)
                 LeanTween.scale(popUpCanvas, Vector3.one, 0.4f).setEase(LeanTweenType.easeOutBack);
         }
 
         private void OnTriggerExit(Collider other)
         {
             if(!other.gameObject.CompareTag("Player")) return;
-            if(_bridgeManager.progressIndex == buildIndex)
                 LeanTween.scale(popUpCanvas, Vector3.zero, 0.4f).setEase(LeanTweenType.easeInBack);
         }
     }

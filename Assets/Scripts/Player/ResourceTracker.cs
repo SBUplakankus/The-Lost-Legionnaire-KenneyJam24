@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Player
@@ -18,10 +19,14 @@ namespace Player
         private void Start()
         {
             timeTaken = 0;
-            timeTaken += Time.deltaTime;
             currentMaterials = 0;
             collectiblesFound = 0;
             respawns = 0;
+        }
+
+        private void Update()
+        {
+            timeTaken += Time.deltaTime;
         }
     }
 }

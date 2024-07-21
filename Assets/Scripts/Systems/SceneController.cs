@@ -10,6 +10,10 @@ namespace Systems
         /// </summary>
         public void LoadGame()
         {
+            SceneManager.LoadScene(1);
+        }
+
+        public void MainMenu(){
             SceneManager.LoadScene(0);
         }
     }

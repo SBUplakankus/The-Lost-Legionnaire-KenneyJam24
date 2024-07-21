@@ -1,4 +1,5 @@
 
+using Systems;
 using UnityEngine;
 
 namespace Player
@@ -6,9 +7,11 @@ namespace Player
     public class BridgeManager : MonoBehaviour
     {
         public static BridgeManager instance;
+        [SerializeField] private PlayerAnimation playerAnimation;
         public int progressIndex;
         public GameObject[] noBridge;
         public GameObject[] bridges;
+        public GameObject[] popUps;
         public ParticleSystem[] buildEffects;
 
         private void Awake()
@@ -36,9 +39,12 @@ namespace Player
         /// </summary>
         public void BuildBridge()
         {
+            AudioManager.instance.PlayBuild();
+            playerAnimation.Build();
             buildEffects[progressIndex].Play();
             noBridge[progressIndex].SetActive(false);
             bridges[progressIndex].SetActive(true);    
+            popUps[progressIndex].SetActive(false);
             progressIndex++;
         }
     }
