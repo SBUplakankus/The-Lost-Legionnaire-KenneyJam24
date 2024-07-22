@@ -8,14 +8,17 @@ namespace Systems
     {
         [SerializeField] private ResourceTracker resourceTracker;
         [SerializeField] private PlayerAnimation playerAnimation;
+        [SerializeField] private Rigidbody rb;
         
 
         private void OnTriggerEnter(Collider other)
         {
             if (!other.gameObject.CompareTag("Player")) return;
-            AudioManager.instance.PlayMaterial();
+            
             playerAnimation.PickUp();
+            AudioManager.instance.PlayMaterial();
             resourceTracker.currentMaterials++;
+            rb.velocity /= 2;
             Destroy(gameObject);
         }
     }

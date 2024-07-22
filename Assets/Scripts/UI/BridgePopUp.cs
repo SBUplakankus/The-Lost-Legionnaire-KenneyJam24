@@ -28,10 +28,6 @@ namespace UI
             if (!Input.GetKeyDown(KeyCode.E)) return;
             
             _resourceTracker.GetNextBuild();
-                
-            Debug.Log(_resourceTracker.currentMaterials);
-            Debug.Log(materialCost);
-            Debug.Log(_resourceTracker.buildCosts[buildIndex]);
         }
 
         private void OnTriggerEnter(Collider other)

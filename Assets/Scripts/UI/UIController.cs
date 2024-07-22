@@ -54,7 +54,7 @@ namespace UI
             materialCounter.text = _resourceTracker.currentMaterials.ToString();
             valuableCounter.text = _resourceTracker.collectiblesFound.ToString();
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 if (!_menuOpen)
                 {

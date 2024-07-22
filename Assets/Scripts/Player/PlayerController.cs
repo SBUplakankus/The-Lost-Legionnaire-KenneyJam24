@@ -1,5 +1,6 @@
 using System;
 using Systems;
+using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -10,6 +11,8 @@ namespace Player
     {
         [Header("Player Movement")]
         private ThirdPersonActions _playerActionsAsset;
+
+        [SerializeField] private UIController ui;
         private InputAction _move;
         [SerializeField] private Rigidbody rb;
         [SerializeField] private float movementForce = 1f;
